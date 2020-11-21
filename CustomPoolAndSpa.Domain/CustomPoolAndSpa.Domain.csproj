@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A4798EF-CF4A-4DDF-8B9D-B54E2866BC12}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CustomPoolAndSpa.Domain</RootNamespace>
+    <AssemblyName>CustomPoolAndSpa.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChemicalUsed.cs" />
+    <Compile Include="Lookups\ChlorineLevel.cs" />
+    <Compile Include="Lookups\Cities.cs" />
+    <Compile Include="Lookups\CombinedChlorinePPM.cs" />
+    <Compile Include="Lookups\CyanuricAcidPPM.cs" />
+    <Compile Include="Lookups\FilteredBackwash.cs" />
+    <Compile Include="Lookups\LookupMaintenance.cs" />
+    <Compile Include="Lookups\MainDrainVisible.cs" />
+    <Compile Include="Lookups\Months.cs" />
+    <Compile Include="Lookups\PHRange.cs" />
+    <Compile Include="Lookups\Years.cs" />
+    <Compile Include="Lookups\Units.cs" />
+    <Compile Include="PartUsed.cs" />
+    <Compile Include="Part.cs" />
+    <Compile Include="Chemical.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="Material.cs" />
+    <Compile Include="MaterialUsed.cs" />
+    <Compile Include="PoolCondition.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceAddress.cs" />
+    <Compile Include="ServiceCall.cs" />
+    <Compile Include="ServiceType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CustomPoolAndSpa.Domain.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\VNC.Core\VNC.Core.csproj">
+      <Project>{c4e954d3-2a7a-48d2-b212-8b9a96bfeb4f}</Project>
+      <Name>VNC.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Domain\Common.Domain.csproj">
+      <Project>{556279ee-21ff-45f4-95d1-bd791fb93464}</Project>
+      <Name>Common.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

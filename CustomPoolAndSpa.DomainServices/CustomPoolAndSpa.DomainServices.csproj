@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4E675438-2DB1-426A-8299-5A7B3D38F568}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CustomPoolAndSpa.DomainServices</RootNamespace>
+    <AssemblyName>CustomPoolAndSpa.DomainServices</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\IAddressDataService.cs" />
+    <Compile Include="Interfaces\ICustomerDataService.cs" />
+    <Compile Include="Interfaces\ILookupMaintenanceDataService.cs" />
+    <Compile Include="Interfaces\ILookupMaintenanceLookupDataService.cs" />
+    <Compile Include="Interfaces\IMaterialDataService.cs" />
+    <Compile Include="Interfaces\IServiceAddressDataService.cs" />
+    <Compile Include="Interfaces\IServiceCallDataService.cs" />
+    <Compile Include="ServicesMock\CustomerDataServiceMock.cs" />
+    <Compile Include="Services\AddressDataService.cs" />
+    <Compile Include="Interfaces\IServiceAddressLookupDataService.cs" />
+    <Compile Include="Interfaces\IServiceCallLookupDataService.cs" />
+    <Compile Include="Services\LookupMaintenanceLookupDataService.cs" />
+    <Compile Include="Services\LookupMaintenanceDataService.cs" />
+    <Compile Include="Services\ServiceCallDataService.cs" />
+    <Compile Include="Services\ServiceAddressLookupDataService.cs" />
+    <Compile Include="Services\CustomersLookupDataService.cs" />
+    <Compile Include="Interfaces\ICustomersLookupDataService.cs" />
+    <Compile Include="Services\ServiceAddressDataService.cs" />
+    <Compile Include="Services\CustomerDataService.cs" />
+    <Compile Include="CustomPoolAndSpaServicesModule.cs" />
+    <Compile Include="ServicesMock\MaterialDataServiceMock.cs" />
+    <Compile Include="Services\MaterialDataService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ServiceCallLookupDataService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\VNC.Core\VNC.Core.csproj">
+      <Project>{c4e954d3-2a7a-48d2-b212-8b9a96bfeb4f}</Project>
+      <Name>VNC.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Domain\Common.Domain.csproj">
+      <Project>{556279ee-21ff-45f4-95d1-bd791fb93464}</Project>
+      <Name>Common.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CustomPoolAndSpa.Core\CustomPoolAndSpa.Core.csproj">
+      <Project>{cc43399f-cf5c-4000-bb90-5dc26ad9e95f}</Project>
+      <Name>CustomPoolAndSpa.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CustomPoolAndSpa.DataAccess\CustomPoolAndSpa.Data.csproj">
+      <Project>{299934D8-B727-4FA2-B4FD-7446333966C0}</Project>
+      <Name>CustomPoolAndSpa.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CustomPoolAndSpa.Domain\CustomPoolAndSpa.Domain.csproj">
+      <Project>{9a4798ef-cf4a-4ddf-8b9d-b54e2866bc12}</Project>
+      <Name>CustomPoolAndSpa.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.4.4</Version>
+    </PackageReference>
+    <PackageReference Include="Prism.Unity">
+      <Version>7.2.0.1422</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

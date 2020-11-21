@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="CustomPoolAndSpa.Domain.Customer">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAAAAAAAAAAAAAQAAAhAAAAAAAAFAAAAAAA=</HashCode>
+      <FileName>Customer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Common.Domain.Person">
+    <Position X="3.5" Y="0.5" Width="2" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CustomPoolAndSpa.Domain.ServiceAddress">
+    <Position X="0.5" Y="4.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAECAAAAAAAAAAAAAAAAAAQAAAAAAAASAAAFAAAAAAA=</HashCode>
+      <FileName>ServiceAddress.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Common.Domain.Address">
+    <Position X="4" Y="3.25" Width="2" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CustomPoolAndSpa.Domain.ServiceReport">
+    <Position X="0.5" Y="7.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAAKAAEAAAACACAAAABAAAQAEAIAAAAAAAAFAAAAAIA=</HashCode>
+      <FileName>ServiceReport.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CustomPoolAndSpa.Domain.ChemicalUsed">
+    <Position X="3.75" Y="10.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAABAAAAAAAAAAAAAAAQAAAAAAAAAAAAFgAAAAAg=</HashCode>
+      <FileName>ChemicalUsed.cs</FileName>
+      <NewMemberFileName>MaterialUsed.cs</NewMemberFileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CustomPoolAndSpa.Domain.Material">
+    <Position X="6.25" Y="13.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAFAAAAAAA=</HashCode>
+      <FileName>Material.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CustomPoolAndSpa.Domain.ServiceType">
+    <Position X="4" Y="6.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAACACAAAAAAAAAAAAAAAAAFAAAEAAg=</HashCode>
+      <FileName>ServiceType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CustomPoolAndSpa.Domain.PoolCondition">
+    <Position X="6.75" Y="7.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAABAAgAAAAAAAAAAAAAAAAAAIBAAAUAAg=</HashCode>
+      <FileName>PoolCondition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CustomPoolAndSpa.Domain.MaterialUsed">
+    <Position X="3.75" Y="13.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAFgAAAAAg=</HashCode>
+      <FileName>MaterialUsed.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CustomPoolAndSpa.Domain.Chemical">
+    <Position X="6.25" Y="10.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAFAAAAAAA=</HashCode>
+      <FileName>Chemical.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CustomPoolAndSpa.Domain.PartUsed">
+    <Position X="3.75" Y="16.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAFgAAAAAg=</HashCode>
+      <FileName>PartUsed.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CustomPoolAndSpa.Domain.Part">
+    <Position X="6.25" Y="16.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAFAAAAAAA=</HashCode>
+      <FileName>Part.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

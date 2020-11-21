@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{299934D8-B727-4FA2-B4FD-7446333966C0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CustomPoolAndSpa.Data</RootNamespace>
+    <AssemblyName>CustomPoolAndSpa.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common.cs" />
+    <Compile Include="CustomPoolAndSpaDatabaseInitializer.cs" />
+    <Compile Include="CustomPoolAndSpaDbContext.cs" />
+    <Compile Include="DatabaseService.cs" />
+    <Compile Include="Interfaces\ICustomPoolAndSpaDbContext.cs" />
+    <Compile Include="Migrations\201904172357588_InitialDomainDatabase.cs" />
+    <Compile Include="Migrations\201904172357588_InitialDomainDatabase.Designer.cs">
+      <DependentUpon>201904172357588_InitialDomainDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904181807087_TableUpdates.cs" />
+    <Compile Include="Migrations\201904181807087_TableUpdates.Designer.cs">
+      <DependentUpon>201904181807087_TableUpdates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904181821097_RemovedNameFromCustomer.cs" />
+    <Compile Include="Migrations\201904181821097_RemovedNameFromCustomer.Designer.cs">
+      <DependentUpon>201904181821097_RemovedNameFromCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904190613215_UpdateMaterialTable.cs" />
+    <Compile Include="Migrations\201904190613215_UpdateMaterialTable.Designer.cs">
+      <DependentUpon>201904190613215_UpdateMaterialTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.4.4</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\VNC.Core\VNC.Core.csproj">
+      <Project>{c4e954d3-2a7a-48d2-b212-8b9a96bfeb4f}</Project>
+      <Name>VNC.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\VNC.Logging\VNC.Logging.csproj">
+      <Project>{0A14CB8D-94E2-4BD4-BAB3-1DC242D49F03}</Project>
+      <Name>VNC.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CustomPoolAndSpa.Application\CustomPoolAndSpa.Application.csproj">
+      <Project>{CA28B89A-EB1C-476D-9D06-9F85BE144C95}</Project>
+      <Name>CustomPoolAndSpa.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Domain\Common.Domain.csproj">
+      <Project>{556279ee-21ff-45f4-95d1-bd791fb93464}</Project>
+      <Name>Common.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CustomPoolAndSpa.Domain\CustomPoolAndSpa.Domain.csproj">
+      <Project>{9a4798ef-cf4a-4ddf-8b9d-b54e2866bc12}</Project>
+      <Name>CustomPoolAndSpa.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201904172357588_InitialDomainDatabase.resx">
+      <DependentUpon>201904172357588_InitialDomainDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904181807087_TableUpdates.resx">
+      <DependentUpon>201904181807087_TableUpdates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904181821097_RemovedNameFromCustomer.resx">
+      <DependentUpon>201904181821097_RemovedNameFromCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904190613215_UpdateMaterialTable.resx">
+      <DependentUpon>201904190613215_UpdateMaterialTable.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
